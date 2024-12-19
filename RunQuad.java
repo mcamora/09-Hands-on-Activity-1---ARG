@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class RunQuad {
     public static void main(String[] args) throws Exception {
-        try (Scanner s = new Scanner(System.in)) {
+        try (Scanner x = new Scanner(System.in)) {
             System.out.print("Select from the Following : \n R - Rectangle \n S - Square \n P - Parallelogram \n H - Rhombus \n T - Trapezoid" + //
                                 " \n Enter choice: ");
-            String choice = s.nextLine();
+            String choice = x.nextLine();
         
             if(choice.equalsIgnoreCase("R")){
                 Rectangle rectangle = new Rectangle();
@@ -54,7 +54,7 @@ public class RunQuad {
 
         } catch (Exception e) {
             System.out.println("\u001B[31m");
-            System.out.println("Invalid input. Restarting Program...");
+            System.out.println("Error: Input not valid. Restarting process...");
             Thread.sleep(1500);
             System.out.println("\u001B[0m");
             main(args);
